@@ -1,0 +1,32 @@
+<RCC>
+  <qresource>
+    <file>images/dollar_currency_sign.png</file>
+    <file>images/info.png</file>
+    <file>images/add_to_shopping_cart.png</file>
+    <file>images/refresh.png</file>
+    <file>images/delete.png</file>
+    <file>images/save.png</file>
+    <file>images/unit_catapult.png</file>
+    <file>images/unit_knight.png</file>
+    <file>images/unit_marcher.png</file>
+    <file>images/unit_archer.png</file>
+    <file>images/unit_spear.png</file>
+    <file>images/back.png</file>
+    <file>images/atack_icon.jpg</file>
+    <file>images/war_axe.jpg</file>
+    <file>images/Attack_icon.png</file>
+    <file>images/unit_spy.png</file>
+    <file>images/unit_light.png</file>
+    <file>images/unit_heavy.png</file>
+    <file>images/unit_axe.png</file>
+    <file>images/unit_sword.png</file>
+    <file>images/unit_ram.png</file>
+    <file>images/unit_nobil.png</file>
+    <file>images/logo.png</file>
+    <file>images/remove.png</file>
+    <file>images/next.png</file>
+    <file>images/add.png</file>
+    <file>images/user.png</file>
+    <file>images/bg_paladin_new.png</file>
+  </qresource>
+</RCC>

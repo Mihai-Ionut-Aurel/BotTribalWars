@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogAtackGroup</class>
+ <widget class="QDialog" name="DialogAtackGroup">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>766</width>
+    <height>181</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>766</width>
+    <height>181</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+}
+ QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+
+
+QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+     margin-top: 1ex; /* leave space at the top for the title */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* position at the top center */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FF0000, stop: 1 #FFFFFF);
+ }
+
+
+
+ QSpinBox {
+     padding-right: 15px; /* make room for the arrows */
+   
+     border-width: 3;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+ }
+</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayoutMain">
+   <property name="horizontalSpacing">
+    <number>12</number>
+   </property>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBoxTroopSettings">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QGridLayout" name="gridLayoutTroopSettings">
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_archer.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_spear.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_spy.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_ram.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_nobil.png</pixmap>
+        </property>
+        <property name="buddy">
+         <cstring>spinBoxSnob</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_sword.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_light.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_catapult.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_knight.png</pixmap>
+        </property>
+        <property name="buddy">
+         <cstring>spinBoxKnight</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_axe.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_marcher.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4" rowspan="2" colspan="4">
+       <widget class="QGroupBox" name="groupBoxRamTarget">
+        <property name="title">
+         <string>Tinta catapulta</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="labelAlignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="formAlignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <item row="0" column="0" colspan="2">
+          <widget class="QComboBox" name="comboBoxBuilding">
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+     border: 1px solid gray;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+
+ QComboBox:editable {
+     background: white;
+ }
+
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+ }
+
+ /* QComboBox gets the &quot;on&quot; state when the popup is open */
+ QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
+                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
+ }
+
+ QComboBox:on { /* shift the text when the popup opens */
+     padding-top: 3px;
+     padding-left: 4px;
+ }
+
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 15px;
+
+     border-left-width: 1px;
+     border-left-color: darkgray;
+     border-left-style: solid; /* just a single line */
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
+ }</string>
+           </property>
+           <property name="currentIndex">
+            <number>7</number>
+           </property>
+           <property name="insertPolicy">
+            <enum>QComboBox::InsertAfterCurrent</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QComboBox::AdjustToContents</enum>
+           </property>
+           <item>
+            <property name="text">
+             <string>Cladirea Principala</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cazarma</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Grajd</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Atelier</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Biserica</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Curte Nobila</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Fierarie</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Piata Centrala</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Statuie</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Targ</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Taietori de lemne</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Mina de argila</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Mina de fier</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ferma</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Magazie</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Zid</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images.qrc">:/images/unit_heavy.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="spinBoxSpear">
+        <property name="maximum">
+         <number>30000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="spinBoxSword"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBoxAxe"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="spinBoxArcher"/>
+      </item>
+      <item row="0" column="3">
+       <widget class="QSpinBox" name="spinBoxSpy">
+        <property name="maximum">
+         <number>50000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QSpinBox" name="spinBoxLight"/>
+      </item>
+      <item row="2" column="3">
+       <widget class="QSpinBox" name="spinBoxMarcher"/>
+      </item>
+      <item row="3" column="3">
+       <widget class="QSpinBox" name="spinBoxHeavy">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QSpinBox" name="spinBoxRam">
+        <property name="maximum">
+         <number>3000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QSpinBox" name="spinBoxCatapult"/>
+      </item>
+      <item row="0" column="7" colspan="2">
+       <widget class="QSpinBox" name="spinBoxSnob">
+        <property name="maximum">
+         <number>300</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7" colspan="2">
+       <widget class="QSpinBox" name="spinBoxKnight"/>
+      </item>
+      <item row="2" column="8">
+       <widget class="QPushButton" name="pushButtonLaunchNow">
+        <property name="styleSheet">
+         <string notr="true">
+font-size: 10px;
+ font-size:10pt; 
+font-weight:600;</string>
+        </property>
+        <property name="text">
+         <string>Lansare Acum</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QPushButton" name="pushButtonDelete">
+        <property name="styleSheet">
+         <string notr="true">
+padding: 3px;
+font-size: 10px;
+ font-size:10pt; 
+font-weight:600;</string>
+        </property>
+        <property name="text">
+         <string>Sterge atac</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayoutLabels">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelAtackingVillage">
+       <property name="styleSheet">
+        <string notr="true">font-size: 14px;
+font-weight:600;</string>
+       </property>
+       <property name="text">
+        <string>XXX|YYY</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelArrow">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:red;
+background-color: rgb(0, 0, 0);
+border-width: 2px;
+border-color: white;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 15px;
+padding-left: 5px;
+padding-right: 5px;
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>5</number>
+       </property>
+       <property name="midLineWidth">
+        <number>6</number>
+       </property>
+       <property name="text">
+        <string>ATACA PE</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelAtackedVillage">
+       <property name="styleSheet">
+        <string notr="true">font-size: 14px;
+font-weight:600;</string>
+       </property>
+       <property name="text">
+        <string>XXX|YYY</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="dateTimeEditLaunchTime">
+       <property name="minimumSize">
+        <size>
+         <width>135</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>Data si ora la care se lanseaza atacul</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;</string>
+       </property>
+       <property name="wrapping">
+        <bool>true</bool>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>23</hour>
+         <minute>59</minute>
+         <second>59</second>
+         <year>2012</year>
+         <month>12</month>
+         <day>31</day>
+        </datetime>
+       </property>
+       <property name="date">
+        <date>
+         <year>2012</year>
+         <month>12</month>
+         <day>31</day>
+        </date>
+       </property>
+       <property name="minimumDate">
+        <date>
+         <year>1990</year>
+         <month>2</month>
+         <day>1</day>
+        </date>
+       </property>
+       <property name="currentSection">
+        <enum>QDateTimeEdit::DaySection</enum>
+       </property>
+       <property name="displayFormat">
+        <string>dd/MM/yy HH:mm:ss</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>false</bool>
+       </property>
+       <property name="timeSpec">
+        <enum>Qt::LocalTime</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="whatsThis">
+        <string>De cate ori sa se repete lansarea acestuiu atac.Acest lucru este folositor in cazul trenuleturilor cu nobili</string>
+       </property>
+       <property name="text">
+        <string>Nr. atacuri</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBoxAtacks">
+       <property name="whatsThis">
+        <string>De cate ori sa se repete lansarea acestuiu atac.Acest lucru este folositor in cazul trenuleturilor cu nobili</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelAtackStatus">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="whatsThis">
+        <string>Situatia atacului</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 3px;
+
+padding-left: 5px;
+padding-right: 5px;
+font-size:11pt; 
+font-weight:600;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Nelansat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonSetTroops">
+       <property name="whatsThis">
+        <string>Trupele setate implictit sunt toate trupele de atac,iar tinta catapultei este piata centrala</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 3px;
+padding-left: 5px;
+padding-right: 5px;
+font-weight:600;</string>
+       </property>
+       <property name="text">
+        <string>Setare trupe</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonSetTroops</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBoxTroopSettings</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>383</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
